@@ -4,3 +4,11 @@ publish/
 *.suo
 *.cachefile
 *.user
+deploy
+deploy/*
+_ReSharper.*
+*.csproj.user
+*.resharper.user
+*.resharper
+*.cache
+~$*
