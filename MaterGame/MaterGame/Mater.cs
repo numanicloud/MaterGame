@@ -60,8 +60,8 @@ namespace MaterGame
 			Value += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 			var count = keyboard.GetState();
-			if( count.IsRightNow( MeanOfKey.Mean1 ) && Speed > 0 ||
-				count.IsRightNow( MeanOfKey.Mean2 ) && Speed < 0 )
+			if( count[MeanOfKey.Mean1] == 1 && Speed > 0 ||
+				count[MeanOfKey.Mean2] == 1 && Speed < 0 )
 			{
 				int add = (int)( Speed * Value );
 				Score += add;

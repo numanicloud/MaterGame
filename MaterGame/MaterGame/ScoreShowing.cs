@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nac.Geometory;
 using NacXna.Helpers;
-using NacXna.Motion;
+using NacXna.Component;
 
 namespace MaterGame
 {
@@ -23,7 +23,7 @@ namespace MaterGame
 			this.Position = position;
 			Trans = 1;
 			motion = new MotionManager( game, position );
-			motion.Motions.Add( new AccelMotion( new Vector2D( 0, -110 ), new Vector2D( 0, 120 ) ) );
+			motion.Add( new AccelMotion( new Vector2D( 0, -2f ), new Vector2D( 0, 0.07f ) ) );
 		}
 		public override void Update( GameTime gameTime )
 		{

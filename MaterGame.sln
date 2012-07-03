@@ -5,9 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterGame", "MaterGame\Mate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterGameContent", "MaterGame\MaterGameContent\MaterGameContent.contentproj", "{7032EBB9-DE29-4F61-B870-582EB09E2299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NacLibrary", "..\..\Libraries\NacLibrary\NacLibrary\NacLibrary.csproj", "{222665C8-9BB1-402F-8CA5-5698959146E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NacLibrary", "NacLibrary\NacLibrary.csproj", "{222665C8-9BB1-402F-8CA5-5698959146E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NacXna", "..\..\Libraries\NacXna\NacXna.csproj", "{DD01DDFF-FD01-4930-B34E-3C1CFDB79629}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NacXna", "NacXna\NacXna.csproj", "{DD01DDFF-FD01-4930-B34E-3C1CFDB79629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -44,7 +44,7 @@ namespace MaterGame
 	{
 		#region フィールド
 		static readonly int scoreToBeSaved = 5;
-		static readonly string directory = "ChickenRace";
+		static readonly string directory = "MaterGame";
 		static readonly string saveFileName = "savedata.sav";
 		public static readonly NacRectangle box = new NacRectangle( 30, 80, Game1.Size.X-60, Game1.Size.Y-90 );
 		public static readonly float materCenter = ( box.Left + box.Right ) / 2;
@@ -81,7 +81,7 @@ namespace MaterGame
 				var state = Keyboard.GetState();
 				if( state[Keys.Enter] == KeyState.Down )
 				{
-					owner.wipe.OrderWipe( 0, 0.3f, 0, () =>
+					owner.wipe.OrderWipe( 0, 15, 0, () =>
 					{
 						owner.state = new PlayingState( Game, owner );
 						Game.Components.Remove( this );
@@ -111,7 +111,7 @@ namespace MaterGame
 			public override void Initialize()
 			{
 				mater = new Mater( Game );
-				owner.wipe.OrderWipe( 1, 0.8f, 0, () =>
+				owner.wipe.OrderWipe( 1, 50, 0, () =>
 				{
 					Game.Components.Add( mater );
 				} );
@@ -126,7 +126,7 @@ namespace MaterGame
 			{
 				if( !mater.Enabled )
 				{
-					owner.wipe.OrderWipe( 0, 0.25f, 0.75f, () =>
+					owner.wipe.OrderWipe( 0, 20, 40, () =>
 					{
 						owner.state = new GameOverState( Game, owner, mater.Score, mater.Speed );
 						Game.Components.Remove( this );
@@ -177,7 +177,7 @@ namespace MaterGame
 				StorageHelper.SaveData<ScoreData[]>( directory, saveFileName, scores.Take( scoreToBeSaved ).ToArray() );
 
 				Enabled = false;
-				owner.wipe.OrderWipe( 1, 0.25f, 0, () => Enabled = true );
+				owner.wipe.OrderWipe( 1, 20, 0, () => Enabled = true );
 				base.Initialize();
 			}
 			public override void Update( GameTime gameTime )
